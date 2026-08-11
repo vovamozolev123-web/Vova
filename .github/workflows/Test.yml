@@ -69,7 +69,6 @@ jobs:
       - name: Establish Tailscale Connection
         run: |
           & "C:\Program Files\Tailscale\tailscale.exe" up --authkey=${{ secrets.TAILSCALE_AUTHKEY }}
-          
           # Wait for Tailscale to assign an IP
           $tsIP = $null
           $retries = 0
